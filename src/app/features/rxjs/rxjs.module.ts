@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { RxjsRoutingModule } from './rxjs-routing.module';
 import { OpratorsComponent } from './components/oprators/oprators.component';
@@ -26,7 +27,9 @@ import { SwitchMapOperatorComponent } from './components/switch-map-operator/swi
 import { ExhaustMapOperatorComponent } from './components/exhaust-map-operator/exhaust-map-operator.component';
 import { SharereplayOperatorComponent } from './components/sharereplay-operator/sharereplay-operator.component';
 import { CombineWithLatestOperatorComponent } from './components/combine-with-latest-operator/combine-with-latest-operator.component';
-
+import { Com1Component } from './components/com1/com1.component';
+import { Com2Component } from './components/com2/com2.component';
+import { Com3Component } from './components/com3/com3.component';
 
 @NgModule({
   declarations: [
@@ -53,11 +56,11 @@ import { CombineWithLatestOperatorComponent } from './components/combine-with-la
     SwitchMapOperatorComponent,
     ExhaustMapOperatorComponent,
     SharereplayOperatorComponent,
-    CombineWithLatestOperatorComponent
+    CombineWithLatestOperatorComponent,
+    Com1Component,
+    Com2Component,
+    Com3Component,
   ],
-  imports: [
-    CommonModule,
-    RxjsRoutingModule
-  ]
+  imports: [CommonModule, RxjsRoutingModule, FormsModule],
 })
-export class RxjsModule { }
+export class RxjsModule {}
