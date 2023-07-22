@@ -19,6 +19,9 @@ export class AddVideosElementService {
 
   public videoEmmit = new ReplaySubject<string>(2);
   public asyncvideoEmmit = new AsyncSubject();
+  public api: string = 'https://dummyjson.com/';
+  public uxTrenz: string =
+    'https://my-json-server.typicode.com/Uxtrendz/apis/videoList';
 
   constructor(private http: HttpClient) {}
 
@@ -29,18 +32,18 @@ export class AddVideosElementService {
   }
 
   fetchData() {
-    return this.http.get(environment.productApi + `users`);
+    return this.http.get(`${this.api}users`);
   }
 
   fetchUxData(search: any): Observable<Videoslist> {
-    return this.http.get<Videoslist>(environment.uxTrenzApi + '?q=' + search);
+    return this.http.get<Videoslist>(`${this.uxTrenz}?q=${search}`);
   }
 
   fetchRequest(): Observable<any> {
-    return this.http.get(environment.productApi + `products`);
+    return this.http.get(`${this.api}products`);
   }
 
   fetchProduct() {
-    return this.http.get(environment.productApi + `products`);
+    return this.http.get(`${this.api}products`);
   }
 }

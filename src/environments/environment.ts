@@ -3,9 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
+  production: true,
   productApi: 'https://dummyjson.com/',
-  uxTrenzApi: 'https://my-json-server.typicode.com/Uxtrendz/apis/videoList',
+  uxTrenzApi: 'https://my-json-server.typicode.com/Uxtrendz/apis/videoList/',
 };
 
 /*
